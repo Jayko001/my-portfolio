@@ -9,6 +9,7 @@ function App() {
   return (
     <>
       hii, my name is jay and this is my first vite react app
+      this is commit 2
     </>
   )
 }
