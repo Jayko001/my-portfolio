@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require("/Users/jaykothari/Documents/Coding/React/blog/my-portfolio/node_modules/.pnpm/tailwindcss@3.3.2/node_modules/tailwindcss/defaultTheme");
+// const defaultTheme = require("/Users/jaykothari/Documents/Coding/React/blog/my-portfolio/node_modules/.pnpm/tailwindcss@3.3.2/node_modules/tailwindcss/defaultTheme");
 export default {
   content: [
     "./index.html",
@@ -26,7 +26,7 @@ export default {
 			},
 		},
 		fontFamily: {
-			sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
+			sans: ["var(--font-inter)"],
 			display: ["var(--font-calsans)"],
 		},
 		backgroundImage: {
