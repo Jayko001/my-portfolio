@@ -1,3 +1,5 @@
+//@ts-nocheck
+
 import React from 'react'
 import $ from 'jquery'
 
@@ -14,7 +16,7 @@ export default function About (){
       window.addEventListener("mousemove", moveCameraAngle);
       setSceneHeight();
     });
-    function moveCameraAngle(event) {
+    function moveCameraAngle(event:any) {
         const xGap = (((event.clientX - window.innerWidth / 2) * 100) /
             (window.innerWidth / 2)) *
             -1;
