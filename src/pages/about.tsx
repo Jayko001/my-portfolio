@@ -51,7 +51,7 @@ function About() {
     }
 
     function setSceneHeight() {
-      const numberOfItems = 3; // Or number of items you have in `.scene3D`
+      const numberOfItems = 5; // Or number of items you have in `.scene3D`
       const itemZ = parseFloat(
         getComputedStyle(document.documentElement).getPropertyValue("--itemZ")
       );
@@ -151,6 +151,9 @@ function About() {
           .viewport .scene3D-container .scene3D > div:nth-child(4) {
             transform: translate3D(-20%, -31%, calc(var(--itemZ) * var(--cameraSpeed) * 4 * -1px));
           }
+          .viewport .scene3D-container .scene3D > div:nth-child(5) {
+            transform: translate3D(-20%, -31%, calc(var(--itemZ) * var(--cameraSpeed) * 5 * -1px));
+          }
           
           *,
           *:before,
@@ -201,10 +204,38 @@ function About() {
       <div className="viewport">
         <div className="scene3D-container">
           <div className="scene3D">
-            <div className="bg-green-100">
-              <img src="https://picsum.photos/700/700" alt="test" className="absolute"/>
+            <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+              <div class="bg-white rounded-lg overflow-hidden shadow-lg relative">
+                <img class="h-56 w-full object-cover" src="https://picsum.photos/700/700" alt="event"/>
+                <div class="p-4 h-auto absolute bottom-0 bg-opacity-70 bg-gray-900 text-white">
+                  <div class="block font-semibold mb-2 text-lg md:text-base lg:text-lg">Event 1</div>
+                  <div class="font-semibold text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                </div>
+              </div>
             </div>
-            <div className='bg-yellow-100'>
+            <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+              <div class="bg-white rounded-lg overflow-hidden shadow-lg relative">
+                <img class="h-56 w-full object-cover" src="https://picsum.photos/700/700" alt="event"/>
+                <div class="p-4 h-full w-full absolute top-0 flex items-center justify-center bg-opacity-70 bg-gray-900 text-white">
+                  <div>
+                    <div class="block font-semibold mb-2 text-lg md:text-base lg:text-lg">Event 1</div>
+                    <div class="font-semibold text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+              <div class="bg-white rounded-lg overflow-hidden shadow-lg relative group">
+                <img class="h-56 w-full object-cover" src="https://picsum.photos/700/700" alt="event"/>
+                <div class="p-4 h-full w-full absolute top-0 flex items-center justify-center bg-opacity-70 bg-gray-900 text-white opacity-0 group-hover:opacity-100 transition duration-500">
+                  <div>
+                    <div class="block font-semibold mb-2 text-lg md:text-base lg:text-lg">Event 1</div>
+                    <div class="font-semibold text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className='bg-blue-100'>
               <img src="https://picsum.photos/700/700" alt="test" className="absolute"/>
             </div>
             <div className='bg-blue-100'>
