@@ -6,6 +6,7 @@
 // as soon as the the first element gets out of the viewport, unblur the next element
 
 import React, { useEffect, useRef } from 'react'
+import ParticleBackground from '../components/particles';
 
 function About() {
   const myItemRef = useRef();
@@ -234,6 +235,7 @@ function About() {
         }
       </style>
       <div className="viewport">
+        <ParticleBackground/>
         <div className="scene3D-container">
           <div className="scene3D">
             <div className="w-full md:w-1/2 lg:w-1/3 p-4">
