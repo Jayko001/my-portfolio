@@ -1,8 +1,15 @@
 //@ts-nocheck
 
-import React, { useEffect } from 'react'
+// learn about useRef hoook
+// blur all elements
+// unblur the first div
+// as soon as the the first element gets out of the viewport, unblur the next element
+
+import React, { useEffect, useRef } from 'react'
 
 function About() {
+  const myItemRef = useRef();
+
   useEffect(() => {
     const perspectiveOrigin = {
       x: parseFloat(
@@ -17,6 +24,27 @@ function About() {
       ),
       maxGap: 10
     };
+
+    const target = myItemRef.current;
+
+    // Initialize a new Intersection Observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        // You can adjust the blur effect based on how much of the element is visible
+        // entry.intersectionRatio gives a value between 0 and 1, indicating how much of the element is visible
+        // In this case, when the element is fully visible, intersectionRatio is 1, so blur will be 0
+        // and when the element is not visible at all, intersectionRatio is 0, so blur will be maximum (say 10px)
+        const blurValue = (1 - entry.intersectionRatio) * 10;
+        target.style.filter = `blur(${blurValue}px)`;
+      });
+    }, {
+      threshold: [0, 0.25, 0.5, 0.75, 1] // Adjust these values as needed to change when the callback is invoked
+    });
+
+    // Start observing the target element
+    if (target) {
+      observer.observe(target);
+    }
 
     window.addEventListener("scroll", moveCamera);
     window.addEventListener("mousemove", moveCameraAngle);
@@ -55,6 +83,7 @@ function About() {
       const itemZ = parseFloat(
         getComputedStyle(document.documentElement).getPropertyValue("--itemZ")
       );
+
       const scenePerspective = parseFloat(
         getComputedStyle(document.documentElement).getPropertyValue(
           "--scenePerspective"
@@ -77,6 +106,9 @@ function About() {
     return () => {
       window.removeEventListener("scroll", moveCamera);
       window.removeEventListener("mousemove", moveCameraAngle);
+      if (target) {
+        observer.unobserve(target);
+      }
     };
   }, []); // Empty dependency array: this useEffect will run once after the component is mounted
 
@@ -204,33 +236,33 @@ function About() {
       <div className="viewport">
         <div className="scene3D-container">
           <div className="scene3D">
-            <div class="w-full md:w-1/2 lg:w-1/3 p-4">
-              <div class="bg-white rounded-lg overflow-hidden shadow-lg relative">
-                <img class="h-56 w-full object-cover" src="https://picsum.photos/700/700" alt="event"/>
-                <div class="p-4 h-auto absolute bottom-0 bg-opacity-70 bg-gray-900 text-white">
-                  <div class="block font-semibold mb-2 text-lg md:text-base lg:text-lg">Event 1</div>
-                  <div class="font-semibold text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            <div className="w-full md:w-1/2 lg:w-1/3 p-4">
+              <div className="bg-white rounded-lg overflow-hidden shadow-lg relative">
+                <img className="h-56 w-full object-cover" src="https://picsum.photos/700/700" alt="event"/>
+                <div className="p-4 h-auto absolute bottom-0 bg-opacity-70 bg-gray-900 text-white">
+                  <div className="block font-semibold mb-2 text-lg md:text-base lg:text-lg">Event 1</div>
+                  <div className="font-semibold text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
                 </div>
               </div>
             </div>
-            <div class="w-full md:w-1/2 lg:w-1/3 p-4">
-              <div class="bg-white rounded-lg overflow-hidden shadow-lg relative">
-                <img class="h-56 w-full object-cover" src="https://picsum.photos/700/700" alt="event"/>
-                <div class="p-4 h-full w-full absolute top-0 flex items-center justify-center bg-opacity-70 bg-gray-900 text-white">
+            <div className="w-full md:w-1/2 lg:w-1/3 p-4">
+              <div className="bg-white rounded-lg overflow-hidden shadow-lg relative">
+                <img className="h-56 w-full object-cover" src="https://picsum.photos/700/700" alt="event"/>
+                <div className="p-4 h-full w-full absolute top-0 flex items-center justify-center bg-opacity-70 bg-gray-900 text-white">
                   <div>
-                    <div class="block font-semibold mb-2 text-lg md:text-base lg:text-lg">Event 1</div>
-                    <div class="font-semibold text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    <div className="block font-semibold mb-2 text-lg md:text-base lg:text-lg">Event 1</div>
+                    <div className="font-semibold text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w-full md:w-1/2 lg:w-1/3 p-4">
-              <div class="bg-white rounded-lg overflow-hidden shadow-lg relative group">
-                <img class="h-56 w-full object-cover" src="https://picsum.photos/700/700" alt="event"/>
-                <div class="p-4 h-full w-full absolute top-0 flex items-center justify-center bg-opacity-70 bg-gray-900 text-white opacity-0 group-hover:opacity-100 transition duration-500">
+            <div className="w-full md:w-1/2 lg:w-1/3 p-4">
+              <div className="bg-white rounded-lg overflow-hidden shadow-lg relative group">
+                <img className="h-56 w-full object-cover" src="https://picsum.photos/700/700" alt="event"/>
+                <div className="p-4 h-full w-full absolute top-0 flex items-center justify-center bg-opacity-70 bg-gray-900 text-white opacity-0 group-hover:opacity-100 transition duration-500">
                   <div>
-                    <div class="block font-semibold mb-2 text-lg md:text-base lg:text-lg">Event 1</div>
-                    <div class="font-semibold text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    <div className="block font-semibold mb-2 text-lg md:text-base lg:text-lg">Event 1</div>
+                    <div className="font-semibold text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
                   </div>
                 </div>
               </div>
