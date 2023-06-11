@@ -6,6 +6,7 @@ import About from "./pages/about.js";
 import Projects from "./pages/projects.tsx";
 import Blog from "./pages/blog.tsx";
 import Contact from "./pages/contact.tsx";
+import BlogPost from "./pages/BlogPost.tsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
 				<Route path="/about" element={<About />} />
 				<Route path="/projects" element={<Projects />} />
 				<Route path="/blog" element={<Blog />} />
+				<Route path="/blog/:id" element={<BlogPost />} />
 				<Route path="/contact" element={<Contact />} />
 			</Routes>
 		</div>
