@@ -4,7 +4,8 @@ export const blogs = [
     {
         id: 1,
         title: "Why I am awesome",
-        content: "# This is a blog post about why I am awesome\n\n ### This is going to be a short post\n\n It talks about my personal experiences, my skills, and my achievements...",
+        //content: "# This is a blog post about why I am awesome\n\n ### This is going to be a short post\n\n It talks about my personal experiences, my skills, and my achievements...",
+        content: "# Hello, *world*! ",
         date: "24th April 2023",
     },
     {
