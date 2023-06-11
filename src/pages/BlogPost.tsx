@@ -1,7 +1,6 @@
-import React from "react";
 import { useParams } from "react-router-dom";
 import { blogs } from "../data/blogs";
-// import ReactMarkdown from 'react-markdown';
+import ReactMarkdown from 'react-markdown';
 
 const BlogPost = () => {
     const { id } = useParams<{ id: string }>();
@@ -15,7 +14,6 @@ const BlogPost = () => {
         <div>
             <h1>{blogPost.title}</h1>
             <ReactMarkdown>{blogPost.content}</ReactMarkdown>
-            <p>{blogPost.description}</p>
             <p>{blogPost.date}</p>
         </div>
     );

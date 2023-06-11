@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom"
 
 type Props = {
@@ -24,7 +23,7 @@ const BlogCard = ({id, title, description, date, link, image }: Props) => {
             </div>
             <div className="flex items-center justify-between mt-4">
                 <Link to={link} className="px-4 py-2 text-sm font-medium text-white bg-gray-800 rounded hover:bg-gray-700"> Read </Link>
-                <p className="text-sm font-medium text-gray-600">{date}</p>
+                <p className="text-sm font-medium text-gray-600">{date} {id}</p>
             </div>
         </div>
     );
