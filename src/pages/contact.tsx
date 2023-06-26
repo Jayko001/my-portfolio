@@ -197,6 +197,10 @@ const ContactMe: React.FC = () => {
           <p className="word">student</p>
         </div>
         
+        <div className='line'>
+          <a href='src/assets/testfile.pdf' className='word fancy' download> RESUME </a>
+        </div>
+
         <div className="line">
           <a 
             id="channel-link" 
@@ -206,6 +210,7 @@ const ContactMe: React.FC = () => {
           >
             @Jay Kothari
           </a>
+          
         </div>
       </div>
     </>
