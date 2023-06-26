@@ -20,6 +20,7 @@
     "react-markdown": "^8.0.7",
     "react-router-dom": "^6.11.2",
     "react-tsparticles": "^2.9.3",
+    "solid": "link:@heroicons/react/20/solid",
     "tailwindcss-debug-screens": "^2.2.1",
     "tsparticles": "^2.9.3",
     "vue3-particles": "^2.9.3"
