@@ -10,11 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.15",
     "@tailwindcss/typography": "^0.5.9",
     "@vercel/analytics": "^1.0.1",
     "axios": "^1.4.0",
     "install": "^0.13.0",
     "jquery": "^3.7.0",
+    "outline": "link:@heroicons/react/24/outline",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^8.0.7",

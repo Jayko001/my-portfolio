@@ -1,6 +1,7 @@
 // import React from "react"
 import BlogCard from "../components/BlogCard"
 import Footer from "../components/footer"
+import Navbar from "../components/Navbar"
 
 import blog1 from "../assets/logo.jpeg"
 import blog2 from "../assets/test1.png"
@@ -8,6 +9,7 @@ import blog2 from "../assets/test1.png"
 export default function Blog (){
     return (
         <>
+            <Navbar></Navbar>
             <div className="bg-black">
                 <div className=" m-10 mr-10 h-72 rounded-[24px] bg-gradient-to-r from-yellow-500 to-amber-500">
                     <div className="flex flex-row relative">
