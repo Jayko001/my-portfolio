@@ -1,7 +1,7 @@
 // import React from "react"
 import BlogCard from "../components/BlogCard";
 import Footer from "../components/footer";
-import Navbar from "../components/Navbar.tsx";
+import Navbar from "../components/navbar";
 
 import blog1 from "../assets/logo.jpeg"
 import blog2 from "../assets/test1.png"
