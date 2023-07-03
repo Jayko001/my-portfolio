@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Logo from "../assets/logo.jpeg"
 
 const funFacts = [
@@ -10,14 +10,38 @@ const funFacts = [
 ];
 
 const LoadingScreen = () => {
-  const [fact, setFact] = useState(funFacts[Math.floor(Math.random() * funFacts.length)]);
-
-  return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black text-white z-10">
-        <img src={Logo} alt="logo" className="top-0% left-0%"/>
-        <p>{fact}</p>
-    </div>
-  );
-};
-
-export default LoadingScreen;
+    const [fact, setFact] = useState(funFacts[Math.floor(Math.random() * funFacts.length)]);
+   
+    return (
+        <>
+            <style>
+                {
+                    `@keyframes logoTransition {
+                        0%   {filter: grayscale(100%);}
+                        100% {filter: grayscale(0%);}
+                    }
+                    
+                    #logo {
+                        animation-name: logoTransition;
+                        animation-duration: 2s;
+                        animation-timing-function: linear;
+                        animation-fill-mode: forwards;
+                    }
+                    `
+                }
+            </style>
+            <div className="fixed inset-0 flex items-center justify-center bg-black text-white z-10">
+                <div>
+                    <div className="relative w-96 h-48">
+                        <img src={Logo} alt="logo" id="logo" className="absolute top-0 left-0 w-full h-full"/>
+                    </div>
+                    <p>{fact}</p>
+                </div>
+            </div>
+        </>
+     
+    );
+  };
+  
+  export default LoadingScreen;
+  
