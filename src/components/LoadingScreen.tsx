@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState } from 'react';
 import Logo from "../assets/logo.jpeg"
 
 const funFacts = [
@@ -10,7 +10,7 @@ const funFacts = [
 ];
 
 const LoadingScreen = () => {
-    const [fact, setFact] = useState(funFacts[Math.floor(Math.random() * funFacts.length)]);
+    const [fact, _setFact] = useState(funFacts[Math.floor(Math.random() * funFacts.length)]);
    
     return (
         <>
