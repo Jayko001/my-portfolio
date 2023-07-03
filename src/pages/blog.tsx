@@ -1,14 +1,31 @@
 // import React from "react"
+import { useState, useEffect } from "react";
+
 import BlogCard from "../components/BlogCard";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
+import LoadingScreen from "../components/LoadingScreen";
 
 import blog1 from "../assets/logo.jpeg"
 import blog2 from "../assets/test1.png"
 
 export default function Blog (){
+
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        // Hide the loading screen after 2 seconds
+        const timer = setTimeout(() => {
+        setIsLoading(false);
+        }, 2000);
+
+        // Cleanup timer on unmount
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <>
+            {isLoading ? <LoadingScreen /> : null}
             <Navbar></Navbar>
             <div className="bg-black">
                 <div className=" m-10 mr-10 h-72 rounded-[24px] bg-gradient-to-r from-yellow-500 to-amber-500">
