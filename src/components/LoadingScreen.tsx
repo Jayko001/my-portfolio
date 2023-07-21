@@ -1,5 +1,6 @@
 import  { useState } from 'react';
 import Logo from "../assets/logo.jpeg"
+import ParticleBackground from './particles';
 
 const funFacts = [
   'I know how to solve 6 different types of Rubik\'s cubes.',
@@ -23,7 +24,7 @@ const LoadingScreen = () => {
                     
                     #logo {
                         animation-name: logoTransition;
-                        animation-duration: 2s;
+                        animation-duration: 1.5s;
                         animation-timing-function: linear;
                         animation-fill-mode: forwards;
                     }
@@ -31,9 +32,11 @@ const LoadingScreen = () => {
                 }
             </style>
             <div className="fixed inset-0 flex items-center justify-center bg-black text-white z-10">
-                <div>
+                <ParticleBackground></ParticleBackground>
+
+                 <div>
                     <div className="relative w-96 h-48">
-                        <img src={Logo} alt="logo" id="logo" className="absolute top-0 left-0 w-full h-full"/>
+                        <img src={Logo} alt="logo" id="logo" className="absolute top-0 left-0"/>
                     </div>
                     <p>{fact}</p>
                 </div>

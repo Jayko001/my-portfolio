@@ -4,6 +4,9 @@ dependencies:
   '@headlessui/react':
     specifier: ^1.7.15
     version: 1.7.15(react-dom@18.2.0)(react@18.2.0)
+  '@splinetool/react-spline':
+    specifier: ^2.2.6
+    version: 2.2.6(@splinetool/runtime@0.9.376)(react-dom@18.2.0)(react@18.2.0)
   '@tailwindcss/typography':
     specifier: ^0.5.9
     version: 0.5.9(tailwindcss@3.3.2)
@@ -31,12 +34,18 @@ dependencies:
   react-markdown:
     specifier: ^8.0.7
     version: 8.0.7(@types/react@18.2.11)(react@18.2.0)
+  react-parallax-tilt:
+    specifier: ^1.7.154
+    version: 1.7.154(react-dom@18.2.0)(react@18.2.0)
   react-router-dom:
     specifier: ^6.11.2
     version: 6.11.2(react-dom@18.2.0)(react@18.2.0)
   react-spring:
     specifier: ^9.7.2
     version: 9.7.2(@react-three/fiber@8.13.4)(konva@9.2.0)(react-dom@18.2.0)(react-konva@18.2.10)(react-native@0.72.1)(react-zdog@1.0.11)(react@18.2.0)(three@0.154.0)(zdog@1.1.3)
+  react-tilt:
+    specifier: ^1.0.2
+    version: 1.0.2(@types/react-dom@18.2.4)(@types/react@18.2.11)(react-dom@18.2.0)(react@18.2.0)
   react-tsparticles:
     specifier: ^2.9.3
     version: 2.9.3(react@18.2.0)
@@ -46,6 +55,9 @@ dependencies:
   tailwindcss-debug-screens:
     specifier: ^2.2.1
     version: 2.2.1(tailwindcss@3.3.2)
+  tilt.js:
+    specifier: ^1.2.1
+    version: 1.2.1
   tsparticles:
     specifier: ^2.9.3
     version: 2.9.3
@@ -1924,6 +1936,7 @@ packages:
 
   /@jridgewell/source-map@0.3.4:
     resolution: {integrity: sha512-KE/SxsDqNs3rrWwFHcRh15ZLVFrI0YoZtgAdIyIq9k5hUNmiWRXXThPomIxHuL20sLdgzbDFyvkUMna14bvtrw==}
+    deprecated: the version has a bug with typescript type resolution
     dev: false
 
   /@jridgewell/sourcemap-codec@1.4.14:
@@ -2366,6 +2379,27 @@ packages:
       '@sinonjs/commons': 3.0.0
     dev: false
 
+  /@splinetool/react-spline@2.2.6(@splinetool/runtime@0.9.376)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-y9L2VEbnC6FNZZu8XMmWM9YTTTWal6kJVfP05Amf0QqDNzCSumKsJxZyGUODvuCmiAvy0PfIfEsiVKnSxvhsDw==}
+    peerDependencies:
+      '@splinetool/runtime': '*'
+      react: '>=17.0.0'
+      react-dom: '>=17.0.0'
+    dependencies:
+      '@splinetool/runtime': 0.9.376
+      lodash.debounce: 4.0.8
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-merge-refs: 2.0.2
+    dev: false
+
+  /@splinetool/runtime@0.9.376:
+    resolution: {integrity: sha512-E3ZepvjEym1JL+x2wBZGmOhdpYFb56aXmM3CSzOpP4X1hnr7eBkAjbo/yyNG4Iocaz39hjZSb4NLO4wqx4hPoQ==}
+    dependencies:
+      on-change: 4.0.2
+      semver-compare: 1.0.0
+    dev: false
+
   /@tailwindcss/typography@0.5.9(tailwindcss@3.3.2):
     resolution: {integrity: sha512-t8Sg3DyynFysV9f4JDOVISGsjazNb48AeIYQwcL+Bsq5uf4RYL75C1giZ43KISjeDGBaTN3Kxh7Xj/vRSMJUUg==}
     peerDependencies:
@@ -2437,7 +2471,6 @@ packages:
     resolution: {integrity: sha512-G2mHoTMTL4yoydITgOGwWdWMVd8sNgyEP85xVmMKAPUBwQWm9wBPQUmvbeF4V3WBY1P7mmL4BkjQ0SqUpf1snw==}
     dependencies:
       '@types/react': 18.2.11
-    dev: true
 
   /@types/react-reconciler@0.26.7:
     resolution: {integrity: sha512-mBDYl8x+oyPX/VBb3E638N0B7xG+SPk/EAMcVPeexqus/5aTpTphQi0curhhshOqRrc9t6OPoJfEUkbymse/lQ==}
@@ -5208,6 +5241,11 @@ packages:
     resolution: {integrity: sha512-RSn9F68PjH9HqtltsSnqYC1XXoWe9Bju5+213R98cNGttag9q9yAOTzdbsqvIa7aNm5WffBZFpWYr2aWrklWAw==}
     engines: {node: '>= 6'}
 
+  /on-change@4.0.2:
+    resolution: {integrity: sha512-cMtCyuJmTx/bg2HCpHo3ZLeF7FZnBOapLqZHr2AlLeJ5Ul0Zu2mUJJz051Fdwu/Et2YW04ZD+TtU+gVy0ACNCA==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: false
+
   /on-finished@2.3.0:
     resolution: {integrity: sha512-ikqdkGAAyf/X/gPhXGvfgAytDZtDbr+bkNUJ0N9h5MI/dmdgCs3l6hoHrcUv41sRKew3jIwrp4qQDXiK99Utww==}
     engines: {node: '>= 0.8'}
@@ -5610,6 +5648,10 @@ packages:
       - supports-color
     dev: false
 
+  /react-merge-refs@2.0.2:
+    resolution: {integrity: sha512-V5BGTwGa2r+/t0A/BZMS6L7VPXY0CU8xtAhkT3XUoI1WJJhhtvulvoiZkJ5Jt9YAW23m4xFWmhQ+C5HwjtTFhQ==}
+    dev: false
+
   /react-native@0.72.1(@babel/core@7.22.5)(@babel/preset-env@7.22.5)(react@18.2.0):
     resolution: {integrity: sha512-O9cIVD++kt2XQl0XLCUGUgwSKr8xp+yo0ho5QK6KYWJrCFnnvQLTKL0+HD0rZUcuqFfGknHQJh3h0moQO2EMDg==}
     engines: {node: '>=16'}
@@ -5661,6 +5703,16 @@ packages:
       - encoding
       - supports-color
       - utf-8-validate
+    dev: false
+
+  /react-parallax-tilt@1.7.154(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-nFRBLpjoDWGfb0Bmi2TadgSO0eIHvoHc04XbAnUQbjxCo6Pi7iEngb2J0oUXFiCQXN9lA3KrfdGTHG8FzspikQ==}
+    peerDependencies:
+      react: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /react-reconciler@0.20.4(react@18.2.0):
@@ -5763,6 +5815,20 @@ packages:
       - react-zdog
       - three
       - zdog
+    dev: false
+
+  /react-tilt@1.0.2(@types/react-dom@18.2.4)(@types/react@18.2.11)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-21tUUsmuw5id/6NDtKqwYTG4taVnw+BoUwIG6YsgPC9GI6cx4BnBuSqgriQYAYcv3bdGNzecaBL+rvQRAm28bg==}
+    peerDependencies:
+      '@types/react': ^18.0.29
+      '@types/react-dom': ^18.0.11
+      react: ^18.2.0
+      react-dom: ^18.2.0
+    dependencies:
+      '@types/react': 18.2.11
+      '@types/react-dom': 18.2.4
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /react-tsparticles@2.9.3(react@18.2.0):
@@ -6031,6 +6097,10 @@ packages:
     resolution: {integrity: sha512-ABvovCDe/k9IluqSh4/ISoq8tIJnW8euVAWYt5j/bg6dRnqwQwiGO1F/V4AyK96NGF/FB04FhOUDuWj8IKfABA==}
     dependencies:
       loose-envify: 1.4.0
+    dev: false
+
+  /semver-compare@1.0.0:
+    resolution: {integrity: sha512-YM3/ITh2MJ5MtzaM429anh+x2jiLVjqILF4m4oyQB18W7Ggea7BfqdH/wGMK7dDiMghv/6WG7znWMwUDzJiXow==}
     dev: false
 
   /semver@5.7.1:
@@ -6387,6 +6457,12 @@ packages:
     dependencies:
       readable-stream: 2.3.8
       xtend: 4.0.2
+    dev: false
+
+  /tilt.js@1.2.1:
+    resolution: {integrity: sha512-IGRh3FJbq6BRH2ETb2KxDWont2k740oR+0QMs39QVkjnr7QmA6L1VzSKsOLgFXg5QNtHyRKp7vzFoJCYxgzsJA==}
+    dependencies:
+      jquery: 3.7.0
     dev: false
 
   /tmpl@1.0.5:
