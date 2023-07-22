@@ -1,6 +1,6 @@
 import  { useState } from 'react';
-import Logo from "../assets/logo.jpeg"
 import ParticleBackground from './particles';
+import Typed from 'react-typed';
 
 const funFacts = [
   'I know how to solve 6 different types of Rubik\'s cubes.',
@@ -17,28 +17,41 @@ const LoadingScreen = () => {
         <>
             <style>
                 {
-                    `@keyframes logoTransition {
-                        0%   {filter: grayscale(100%);}
-                        100% {filter: grayscale(0%);}
+                    `
+                    @keyframes marquee {
+                        0% { transform: translateX(100%); }
+                        100% { transform: translateX(-100%); }
                     }
-                    
-                    #logo {
-                        animation-name: logoTransition;
-                        animation-duration: 1.5s;
-                        animation-timing-function: linear;
-                        animation-fill-mode: forwards;
+                    .animated-text {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        animation: marquee 10s linear infinite;
                     }
                     `
                 }
             </style>
-            <div className="fixed inset-0 flex items-center justify-center bg-black text-white z-10">
+
+            <div className='z-10 bg-black'>
+
+            </div>
+
+            <div className="fixed inset-0 flex items-center justify-center text-white z-20">
                 <ParticleBackground></ParticleBackground>
 
-                 <div>
-                    <div className="relative w-96 h-48">
-                        <img src={Logo} alt="logo" id="logo" className="absolute top-0 left-0"/>
+                 <div className='z-30 flex flex-col'>
+                    <div className="text-5xl font-bold text-center">
+                        Fun Fact
                     </div>
-                    <p>{fact}</p>
+
+                    <div className='mx-auto mt-10'>
+                        <Typed
+                            strings={[fact]}
+                            typeSpeed={15}
+                            backSpeed={30}
+                            className=""
+                        />
+                    </div>
+                    
                 </div>
             </div>
         </>

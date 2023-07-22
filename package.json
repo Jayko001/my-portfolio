@@ -28,6 +28,7 @@
     "react-spring": "^9.7.2",
     "react-tilt": "^1.0.2",
     "react-tsparticles": "^2.9.3",
+    "react-typed": "^1.2.0",
     "slick-carousel": "^1.8.1",
     "solid": "link:@heroicons/react/20/solid",
     "tailwindcss-debug-screens": "^2.2.1",

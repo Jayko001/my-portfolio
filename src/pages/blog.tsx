@@ -18,7 +18,7 @@ export default function Blog (){
         // Hide the loading screen after 2 seconds
         const timer = setTimeout(() => {
         setIsLoading(false);
-        }, 2000);
+        }, 3000);
 
         // Cleanup timer on unmount
         return () => clearTimeout(timer);
@@ -30,7 +30,7 @@ export default function Blog (){
                 {isLoading ? <LoadingScreen /> : null}
                 <Navbar></Navbar>
                 <div className="m-10 mr-10 h-72 rounded-[24px] bg-gradient-to-r from-yellow-500 to-amber-500">
-                    <div className="flex flex-row relative">
+                    <div className="flex flex-row relative z-10">
                         <div className="text-7xl text-white absolute left-10 top-36">
                             Jay Kothari -
                         </div>
