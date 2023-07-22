@@ -368,7 +368,7 @@ function About() {
             <EventCard imgSrc={oneseven} title="Certificates" subtitle="Got to get a proof for working 60 hours a week" />
             <EventCard imgSrc={oneeight} title="Waffle House" subtitle="Discussing business at Waffle House. Have you ever done that before?" />
             <EventCard imgSrc={onenine} title="Smokies" subtitle="The 'Perfect' view. Period. " />
-            <EventCard imgSrc={twozero} title="Silicon Valley" subtitle="Where the software bro's belong " />
+            <EventCard imgSrc={twozero} title="Silicon Valley" subtitle="Where the software bros belong " />
             <EventCard imgSrc={twoone} title="Payday 2.0" subtitle="Alright, now we are talking ( and coding )!" />
             <EventCard imgSrc={twotwo} title="MasterAi is born" subtitle="You'll hear the rest of the story on the news" />
             <EventCard imgSrc={twothree} title="A team" subtitle="VC 101: Choose an A team over anything else" />

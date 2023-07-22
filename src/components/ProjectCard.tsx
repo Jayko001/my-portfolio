@@ -31,12 +31,12 @@ const ProjectCard = ({id, title, description, image }: Props) => {
                 scale={1.1}
                  >
 
-                <div className="inner element flex flex-col bg-white text-black p-4 shadow-lg border-gray-500 border-2">
+                <div className="flex flex-col bg-white text-black p-4 shadow-lg border-gray-500 border-2">
                     <div>
                         <h3 className="text-xl font-semibold pt-2 pb-2">{title}</h3>
-                        <div className="">
+                        <div className="inner-element">
                             <img
-                                className="h-40 rounded-t-lg inner-element"
+                                className="h-40 rounded-t-lg hover:drop-shadow-xl"
                                 src= {image}
                                 alt="Article"
                             />
