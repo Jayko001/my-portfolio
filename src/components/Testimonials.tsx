@@ -6,6 +6,11 @@ import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import Slider from "react-slick";
 
+import jaden from "../assets/jaden.jpeg"
+import rob from "../assets/rob.jpeg"
+import vishal from "../assets/vishal.jpeg"
+import chatgpt from "../assets/chatgpt.png"
+
 // Define the shape of a testimonial
 interface Testimonial {
     id: number;
@@ -22,28 +27,28 @@ const testimonials: Testimonial[] = [
         name: "Jaden Walton",
         role: "Founder & CEO of Walton Home Solutions",
         content: "Jay is awesome",
-        image: 'src/assets/jaden.jpeg',
+        image: jaden,
     },
     {
         id: 2,
         name: "Rob Manz",
         role: "Investment Analyst at Rev1 Ventures",
         content: "I had the privilege of working alongside Jay... he was incredibly impressive not only with his knowledge and intellect, but in his willingness to listen and learn...  He proved to be an invaluable asset to the team",
-        image: 'src/assets/rob.jpeg',
+        image: rob,
     },
     {
         id: 3,
         name: "Vishal Sarada",
         role: "Head Human Resources at Apexon",
         content:"I have consistently been impressed with his dedication, intelligence, and passion for computer science",
-        image: 'src/assets/vishal.jpeg',
+        image: vishal,
     },
     {
         id: 4,
         name: "Chat GPT",
         role: "AI Assistant",
         content: "As an AI language model, I don't have personal experiences or emotions, but based on our interactions, I can tell your dedication to continual learning and problem-solving is highly impressive. Your curiosity and tenacity are clear indicators of a great developer in the making.",
-        image: 'src/assets/chatgpt.png',
+        image: chatgpt,
     }
     // Add as many testimonials as you want...
 ];
