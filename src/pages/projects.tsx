@@ -1,11 +1,12 @@
 import ProjectCard from "../components/ProjectCard"
+import Testimonials from "../components/Testimonials"
 
 import blog1 from "../assets/logo.jpeg"
 import blog2 from "../assets/test1.png"
 
 export default function Projects (){
     return (
-        <div className="bg-black">
+        <div className="">
             <h1 className="text-white text-7xl">
                 My works
             </h1>
@@ -18,6 +19,7 @@ export default function Projects (){
                     </div>
                 </div>
 
+            <Testimonials></Testimonials>
         </div>
 
     )
