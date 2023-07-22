@@ -1,10 +1,13 @@
 import { useParams } from "react-router-dom";
+import Navbar from "../components/navbar";
 // import { blogs } from "../data/blogs";
 
 import Blog1 from "../data/blog1"
 import Blog2 from "../data/blog2"
+import Blog3 from "../data/blog3";
+import Blog4 from "../data/blog4";
 
-const blogs = [<Blog1></Blog1>, <Blog2></Blog2>]
+const blogs = [<Blog1></Blog1>, <Blog2></Blog2>, <Blog3></Blog3>, <Blog4></Blog4>]
 
 const BlogPost = () => {
     const { id } = useParams<{ id: string }>();
@@ -17,6 +20,7 @@ const BlogPost = () => {
 
     return (
         <div>
+            <Navbar></Navbar>
             {blogPost}
         </div>
     );
