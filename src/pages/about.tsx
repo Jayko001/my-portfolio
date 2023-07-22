@@ -8,8 +8,50 @@
 import React, { useEffect, useRef } from 'react'
 import ParticleBackground from '../components/particles';
 
+import one from '../assets/about/1.jpeg'
+import two from '../assets/about/2.jpeg'
+import three from '../assets/about/3.jpeg'
+import four from '../assets/about/4.jpeg'
+import five from '../assets/about/5.jpeg'
+import six from '../assets/about/6.jpeg'
+import seven from '../assets/about/7.jpeg'
+import eight from '../assets/about/8.jpeg'
+import nine from '../assets/about/9.jpeg'
+import ten from '../assets/about/10.jpeg'
+import oneone from '../assets/about/11.jpeg'
+import onetwo from '../assets/about/12.jpeg'
+import onethree from '../assets/about/13.jpeg'
+import onefour from '../assets/about/14.jpeg'
+import onefive from '../assets/about/15.jpeg'
+import onesix from '../assets/about/16.jpeg'
+import oneseven from '../assets/about/17.jpeg'
+import oneeight from '../assets/about/18.jpeg'
+import onenine from '../assets/about/19.jpeg'
+import twozero from '../assets/about/20.jpeg'
+import twoone from '../assets/about/21.png'
+import twotwo from '../assets/about/22.png'
+import twothree from '../assets/about/23.jpeg'
+import twofour from '../assets/about/24.png'
+import twofive from '../assets/about/25.png'
+import twosix from '../assets/about/26.png'
+import twoseven from '../assets/about/27.png'
+import twoeight from '../assets/about/28.png'
+
 function About() {
   const myItemRef = useRef();
+
+  const EventCard = ({ imgSrc, imgAlt, title, subtitle }) => (
+    <div className="w-full md:w-1/2 lg:w-1/3 p-4">
+        <div className="bg-white rounded-lg overflow-hidden shadow-lg relative">
+            <img className=" object-cover" src={imgSrc} alt={imgAlt || 'event'} />
+            <div className="p-4 h-auto absolute bottom-0 bg-opacity-70 bg-gray-900 text-white">
+                <div className="block font-semibold mb-2 text-lg md:text-base lg:text-lg">{title}</div>
+                <div className="font-semibold text-sm">{subtitle}</div>
+            </div>
+        </div>
+    </div>
+  );
+  
 
   useEffect(() => {
     const perspectiveOrigin = {
@@ -29,18 +71,18 @@ function About() {
     const target = myItemRef.current;
 
     // Initialize a new Intersection Observer
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        // You can adjust the blur effect based on how much of the element is visible
-        // entry.intersectionRatio gives a value between 0 and 1, indicating how much of the element is visible
-        // In this case, when the element is fully visible, intersectionRatio is 1, so blur will be 0
-        // and when the element is not visible at all, intersectionRatio is 0, so blur will be maximum (say 10px)
-        const blurValue = (1 - entry.intersectionRatio) * 10;
-        target.style.filter = `blur(${blurValue}px)`;
-      });
-    }, {
-      threshold: [0, 0.25, 0.5, 0.75, 1] // Adjust these values as needed to change when the callback is invoked
-    });
+    // const observer = new IntersectionObserver((entries) => {
+    //   entries.forEach(entry => {
+    //     // You can adjust the blur effect based on how much of the element is visible
+    //     // entry.intersectionRatio gives a value between 0 and 1, indicating how much of the element is visible
+    //     // In this case, when the element is fully visible, intersectionRatio is 1, so blur will be 0
+    //     // and when the element is not visible at all, intersectionRatio is 0, so blur will be maximum (say 10px)
+    //     const blurValue = (1 - entry.intersectionRatio) * 5;
+    //     target.style.filter = `blur(${blurValue}px)`;
+    //   });
+    // }, {
+    //   threshold: [0, 0.25, 0.5, 0.75, 1] // Adjust these values as needed to change when the callback is invoked
+    // });
 
     // Start observing the target element
     if (target) {
@@ -80,7 +122,7 @@ function About() {
     }
 
     function setSceneHeight() {
-      const numberOfItems = 5; // Or number of items you have in `.scene3D`
+      const numberOfItems = 30; // Or number of items you have in `.scene3D`
       const itemZ = parseFloat(
         getComputedStyle(document.documentElement).getPropertyValue("--itemZ")
       );
@@ -187,6 +229,75 @@ function About() {
           .viewport .scene3D-container .scene3D > div:nth-child(5) {
             transform: translate3D(-20%, -31%, calc(var(--itemZ) * var(--cameraSpeed) * 5 * -1px));
           }
+          .viewport .scene3D-container .scene3D > div:nth-child(6) {
+            transform: translate3D(-20%, -31%, calc(var(--itemZ) * var(--cameraSpeed) * 6 * -1px));
+          }
+          .viewport .scene3D-container .scene3D > div:nth-child(7) {
+            transform: translate3D(-20%, -31%, calc(var(--itemZ) * var(--cameraSpeed) * 7 * -1px));
+          }
+          .viewport .scene3D-container .scene3D > div:nth-child(8) {
+            transform: translate3D(-20%, -31%, calc(var(--itemZ) * var(--cameraSpeed) * 8 * -1px));
+          }
+          .viewport .scene3D-container .scene3D > div:nth-child(9) {
+            transform: translate3D(-20%, -31%, calc(var(--itemZ) * var(--cameraSpeed) * 9 * -1px));
+          }
+          .viewport .scene3D-container .scene3D > div:nth-child(10) {
+            transform: translate3D(-20%, -31%, calc(var(--itemZ) * var(--cameraSpeed) * 10 * -1px));
+          }
+          .viewport .scene3D-container .scene3D > div:nth-child(11) {
+            transform: translate3D(-20%, -31%, calc(var(--itemZ) * var(--cameraSpeed) * 11 * -1px));
+          }
+          .viewport .scene3D-container .scene3D > div:nth-child(12) {
+            transform: translate3D(-20%, -31%, calc(var(--itemZ) * var(--cameraSpeed) * 12 * -1px));
+          }
+          .viewport .scene3D-container .scene3D > div:nth-child(13) {
+            transform: translate3D(-20%, -31%, calc(var(--itemZ) * var(--cameraSpeed) * 13 * -1px));
+          }
+          .viewport .scene3D-container .scene3D > div:nth-child(14) {
+            transform: translate3D(-20%, -31%, calc(var(--itemZ) * var(--cameraSpeed) * 14 * -1px));
+          }
+          .viewport .scene3D-container .scene3D > div:nth-child(15) {
+            transform: translate3D(-20%, -31%, calc(var(--itemZ) * var(--cameraSpeed) * 15 * -1px));
+          }
+          .viewport .scene3D-container .scene3D > div:nth-child(16) {
+            transform: translate3D(-20%, -31%, calc(var(--itemZ) * var(--cameraSpeed) * 16 * -1px));
+          }
+          .viewport .scene3D-container .scene3D > div:nth-child(17) {
+            transform: translate3D(-20%, -31%, calc(var(--itemZ) * var(--cameraSpeed) * 17 * -1px));
+          }
+          .viewport .scene3D-container .scene3D > div:nth-child(18) {
+            transform: translate3D(-20%, -31%, calc(var(--itemZ) * var(--cameraSpeed) * 18 * -1px));
+          }
+          .viewport .scene3D-container .scene3D > div:nth-child(19) {
+            transform: translate3D(-20%, -31%, calc(var(--itemZ) * var(--cameraSpeed) * 19 * -1px));
+          }
+          .viewport .scene3D-container .scene3D > div:nth-child(20) {
+            transform: translate3D(-20%, -31%, calc(var(--itemZ) * var(--cameraSpeed) * 20 * -1px));
+          }
+          .viewport .scene3D-container .scene3D > div:nth-child(21) {
+            transform: translate3D(-20%, -31%, calc(var(--itemZ) * var(--cameraSpeed) * 21 * -1px));
+          }
+          .viewport .scene3D-container .scene3D > div:nth-child(22) {
+            transform: translate3D(-20%, -31%, calc(var(--itemZ) * var(--cameraSpeed) * 22 * -1px));
+          }
+          .viewport .scene3D-container .scene3D > div:nth-child(23) {
+            transform: translate3D(-20%, -31%, calc(var(--itemZ) * var(--cameraSpeed) * 23 * -1px));
+          }
+          .viewport .scene3D-container .scene3D > div:nth-child(24) {
+            transform: translate3D(-20%, -31%, calc(var(--itemZ) * var(--cameraSpeed) * 24 * -1px));
+          }
+          .viewport .scene3D-container .scene3D > div:nth-child(25) {
+            transform: translate3D(-20%, -31%, calc(var(--itemZ) * var(--cameraSpeed) * 25 * -1px));
+          }
+          .viewport .scene3D-container .scene3D > div:nth-child(26) {
+            transform: translate3D(-20%, -31%, calc(var(--itemZ) * var(--cameraSpeed) * 26 * -1px));
+          }
+          .viewport .scene3D-container .scene3D > div:nth-child(27) {
+            transform: translate3D(-20%, -31%, calc(var(--itemZ) * var(--cameraSpeed) * 27 * -1px));
+          }
+          .viewport .scene3D-container .scene3D > div:nth-child(28) {
+            transform: translate3D(-20%, -31%, calc(var(--itemZ) * var(--cameraSpeed) * 28 * -1px));
+          }
           
           *,
           *:before,
@@ -238,27 +349,35 @@ function About() {
         <ParticleBackground/>
         <div className="scene3D-container">
           <div className="scene3D">
-            <div className="w-full md:w-1/2 lg:w-1/3 p-4">
-              <div className="bg-white rounded-lg overflow-hidden shadow-lg relative">
-                <img className="h-56 w-full object-cover" src="https://picsum.photos/700/700" alt="event"/>
-                <div className="p-4 h-auto absolute bottom-0 bg-opacity-70 bg-gray-900 text-white">
-                  <div className="block font-semibold mb-2 text-lg md:text-base lg:text-lg">Event 1</div>
-                  <div className="font-semibold text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                </div>
-              </div>
-            </div>
-            <div className="w-full md:w-1/2 lg:w-1/3 p-4">
-              <div className="bg-white rounded-lg overflow-hidden shadow-lg relative">
-                <img className="h-56 w-full object-cover" src="https://picsum.photos/700/700" alt="event"/>
-                <div className="p-4 h-full w-full absolute top-0 flex items-center justify-center bg-opacity-70 bg-gray-900 text-white">
-                  <div>
-                    <div className="block font-semibold mb-2 text-lg md:text-base lg:text-lg">Event 1</div>
-                    <div className="font-semibold text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="w-full md:w-1/2 lg:w-1/3 p-4">
+            <EventCard imgSrc={one} title="Independence" subtitle="Beginning of an adventure" />
+            <EventCard imgSrc={two} title="Freedom" subtitle="Set foot on the land of opportunities" />
+            <EventCard imgSrc={three} title="Love at first sight" subtitle="Fell in love with Cincy" />
+            <EventCard imgSrc={four} title="Redefining 'Football'" subtitle="Soccer? Is that even a thing?" />
+            <EventCard imgSrc={five} title="Friendship" subtitle="Do I need to explain this too?" />
+            <EventCard imgSrc={six} title="1 step" subtitle="Journey of a thousand miles begins with 1 step (pedal?)" />
+            <EventCard imgSrc={seven} title="Entrepreneurship 101" subtitle="Finally starting to bleed the business blood" />
+            <EventCard imgSrc={eight} title="New world" subtitle="Discovered a new Capitalistic Fairy Land" />
+            <EventCard imgSrc={nine} title="Snow White" subtitle="Found my new favorite season" />
+            <EventCard imgSrc={ten} title="Payday" subtitle="My first job, working with the best" />
+            <EventCard imgSrc={oneone} title="Business Trip" subtitle="First of many" />
+            <EventCard imgSrc={onetwo} title="Big Screen" subtitle="There is nothing for me to say, you gotta see it" />
+            <EventCard imgSrc={onethree} title="Fahrenheit Finance" subtitle="A new entity is born" />
+            <EventCard imgSrc={onefour} title="30th April, 2022" subtitle="A date to remember" />
+            <EventCard imgSrc={onefive} title="The advent of Code" subtitle="Getting paid to sit and type. Awesome, isnt it?" />
+            <EventCard imgSrc={onesix} title="Business Model" subtitle="Didnt work out, but hey, its a start" />
+            <EventCard imgSrc={oneseven} title="Certificates" subtitle="Got to get a proof for working 60 hours a week" />
+            <EventCard imgSrc={oneeight} title="Waffle House" subtitle="Discussing business at Waffle House. Have you ever done that before?" />
+            <EventCard imgSrc={onenine} title="Smokies" subtitle="The 'Perfect' view. Period. " />
+            <EventCard imgSrc={twozero} title="Silicon Valley" subtitle="Where the software bro's belong " />
+            <EventCard imgSrc={twoone} title="Payday 2.0" subtitle="Alright, now we are talking ( and coding )!" />
+            <EventCard imgSrc={twotwo} title="MasterAi is born" subtitle="You'll hear the rest of the story on the news" />
+            <EventCard imgSrc={twothree} title="A team" subtitle="VC 101: Choose an A team over anything else" />
+            <EventCard imgSrc={twofour} title="A new hobby" subtitle="A software developer welding. There is nothing wrong with that. Right?" />
+            <EventCard imgSrc={twofive} title="Big Fat Check" subtitle="Winner! Winner! Paneer Dinner!" />
+            <EventCard imgSrc={twosix} title="Last Day" subtitle="I'll be back soon. I Promise." />
+            <EventCard imgSrc={twoseven} title="Baseball" subtitle="They should have beds at the stadium. I hope you know why." />
+            <EventCard imgSrc={twoeight} title="Jay" subtitle="Just a photo of me to end the slidshow (if you could call it that )" />
+            {/* <div className="w-full md:w-1/2 lg:w-1/3 p-4">
               <div className="bg-white rounded-lg overflow-hidden shadow-lg relative group">
                 <img className="h-56 w-full object-cover" src="https://picsum.photos/700/700" alt="event"/>
                 <div className="p-4 h-full w-full absolute top-0 flex items-center justify-center bg-opacity-70 bg-gray-900 text-white opacity-0 group-hover:opacity-100 transition duration-500">
@@ -268,13 +387,8 @@ function About() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className='bg-blue-100'>
-              <img src="https://picsum.photos/700/700" alt="test" className="absolute"/>
-            </div>
-            <div className='bg-blue-100'>
-              <img src="https://picsum.photos/700/700" alt="test" className="absolute"/>
-            </div>
+            </div> */}
+
           </div>
         </div>
       </div>

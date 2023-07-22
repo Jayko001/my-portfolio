@@ -3,6 +3,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 
 const navigation = [
   { name: 'Home', href: '/', current: true },
+  { name: 'About', href: '/about', current: false},
   { name: 'Blog', href: '/blog', current: false },
   { name: 'Projects', href: '/projects', current: false },
   { name: 'Contact', href: '/contact', current: false },
