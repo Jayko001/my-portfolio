@@ -26,18 +26,24 @@ export default function Blog (){
 
     return (
         <>
-            <div className="bg-black z-10">
+            <div className=" z-10">
                 {isLoading ? <LoadingScreen /> : null}
                 <Navbar></Navbar>
                 <div className="m-10 mr-10 h-72 rounded-[24px] bg-gradient-to-r from-yellow-500 to-amber-500">
                     <div className="flex flex-row relative z-10">
-                        <div className="text-7xl text-white absolute left-10 top-36">
+                        <div className="absolute left-10 top-36">
+                        <div className="md:text-7xl text-2xl font-tektur text-white ">
                             Jay Kothari -
                         </div>
-                        <div className="absolute end-10 top-32">
-                            <img src="https://github.com/Jayko001.png" className="w-32 rounded-full"/>
+                        <div className=" text-white relative pt-3">
+                            Hello, this is my blog. I write about self-improvement, productivity, and more!
+                        </div>
                         </div>
                         
+                        <div className="absolute end-10 top-32">
+                            <img src="https://github.com/Jayko001.png" className="md:w-32 w-20 rounded-full"/>
+                        </div>
+
                     </div>
                 </div>
 

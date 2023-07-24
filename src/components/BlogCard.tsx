@@ -20,7 +20,7 @@ const BlogCard = ({id, title, description, date, link, image }: Props) => {
                         alt="Article"
                     />
                 </div>
-                <h3 className="text-2xl font-semibold pt-2 pb-2">{title}</h3>
+                <h3 className="text-2xl font-semibold font-tektur pt-2 pb-2">{title}</h3>
                 <hr className="h-1 bg-black pb-2"/>
                 <p className="mt-2 text-gray-300">{description}</p>
             </div>

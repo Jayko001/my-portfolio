@@ -2,11 +2,12 @@ import Tilt from 'react-parallax-tilt';
 type Props = {
     id: number;
     title: string;
+    subtitle: string;
     description: string;
     image: string;
 };
 
-const ProjectCard = ({id, title, description, image }: Props) => {
+const ProjectCard = ({id, title, subtitle, description, image }: Props) => {
     return (
         <>
 
@@ -30,22 +31,21 @@ const ProjectCard = ({id, title, description, image }: Props) => {
                 transitionSpeed={1500}
                 scale={1.1}
                  >
-
-                <div className="flex flex-col bg-white text-black p-4 shadow-lg border-gray-500 border-2">
+                <div className="flex flex-col bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-pink-500 hover:via-purple-500 hover:to-indigo-500 
+                hover:transition-all duration-300 ease-out hover:ease-in hover:animate-shine text-black p-4 shadow-lg border-gray-500 border-2 w-92">
                     <div>
-                        <h3 className="text-xl font-semibold pt-2 pb-2">{title}</h3>
+                        <h3 className="text-2xl font-tektur font-semibold pt-2 pb-1">{title}</h3>
+                        <h3 className="text-lg font-tektur pb-3">{subtitle}</h3>
                         <div className="inner-element">
                             <img
-                                className="h-40 rounded-t-lg hover:drop-shadow-xl"
+                                className="h-40 rounded-t-lg hover:drop-shadow-xl bg-white"
                                 src= {image}
                                 alt="Article"
                             />
                         </div>
-                    
-                        <p className="mt-2 text-gray-300">{description} {id}</p>
+                        <p className="mt-2 text-white">{description} {id}</p>
                     </div>
                 </div>     
-
                 </Tilt>
                            
         </>

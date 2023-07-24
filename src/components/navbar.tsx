@@ -1,4 +1,5 @@
 import { Disclosure } from '@headlessui/react'
+import logo from '../assets/logo-final.png'
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
@@ -14,7 +15,7 @@ function classNames(...classes: any) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-gray-800 font-tektur">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -39,7 +40,7 @@ export default function Navbar() {
                   />
                   <img
                     className="hidden h-8 w-auto lg:block"
-                    src="./src/assets/logo-final.png"
+                    src={logo}
                     alt="Jay Kothari"
                   />
                 </div>

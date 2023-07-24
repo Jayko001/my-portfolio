@@ -47,7 +47,7 @@ export default function CoolNavbar() {
     } 
 
     return (
-        <nav className="my-16 animate-fade-in text-zinc-500">
+        <nav className="my-16 animate-fade-in font-tektur text-zinc-500">
             <ul>
                 <Link to="/about">
                     <li id="nav-element-1" data-value="ABOUT ME" className="inline-block px-4 py-2 mx-2 text-sm font-medium tracking-wider uppercase duration-1000 transform cursor-pointer hover:scale-110 hover:text-zinc-400">

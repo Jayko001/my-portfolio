@@ -28,6 +28,7 @@ export default {
 		fontFamily: {
 			sans: ["var(--font-inter)"],
 			display: ["var(--font-calsans)"],
+			tektur: ['Tektur'],
 		},
 		backgroundImage: {
 			"gradient-radial":
@@ -35,6 +36,7 @@ export default {
 		},
 		animation: {
 			"fade-in": "fade-in 3s ease-in-out forwards",
+			shine: "shine 1s",
 			title: "title 3s ease-out forwards",
 			"fade-left": "fade-left 3s ease-in-out forwards",
 			"fade-right": "fade-right 3s ease-in-out forwards",
