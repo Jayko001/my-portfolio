@@ -72,7 +72,7 @@ const ContactMe: React.FC = () => {
           }
           
           body {
-            height: 100vh;
+            // height: 100vh;
             background-color: black;
             margin: 0rem;
             overflow: hidden;
@@ -87,7 +87,7 @@ const ContactMe: React.FC = () => {
           
           .word {
             color: white;
-            font-size: clamp(2rem, 8vw, 10rem);
+            font-size: clamp(1.5rem, 6vw, 8rem);
             font-family: "Rubik", sans-serif;
             margin: 0rem;
             text-transform: uppercase;
@@ -182,11 +182,11 @@ const ContactMe: React.FC = () => {
           `
         }
       </style>
-      <div className=' absolute top-0 left-0 w-full'>
+      <div className='absolute top-0 left-0 w-full'>
         <Navbar />
       </div>
-      <div id="text">
-        <div className="line">
+      <div id="text" className='relative mx-auto top-20'>
+        {/* <div className="line">
           <p className="word">A</p>
           <p className="word">Person</p>
         </div>
@@ -198,16 +198,24 @@ const ContactMe: React.FC = () => {
 
         <div className="line">
           <p className="word">student</p>
+        </div> */}
+
+        <div className='line'>
+          <a href='https://github.com/Jayko001' className='word fancy' download> GITHUB </a>
+        </div>
+
+        <div className='line'>
+          <a href='https://www.linkedin.com/in/jayko001/' className='word fancy' download> LINKEDIN </a>
         </div>
         
         <div className='line'>
-          <a href='src/assets/testfile.pdf' className='word fancy' download> RESUME </a>
+          <a href='src/assets/resume.pdf' className='word fancy' download> RESUME </a>
         </div>
 
         <div className="line">
           <a 
             id="channel-link" 
-            href="https://jayko.me" 
+            href="mailto:kotharjy@mail.uc.edu" 
             target="_blank" 
             className="word fancy"
           >

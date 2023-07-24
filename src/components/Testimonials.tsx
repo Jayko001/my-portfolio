@@ -26,7 +26,7 @@ const testimonials: Testimonial[] = [
         id: 1,
         name: "Jaden Walton",
         role: "Founder & CEO of Walton Home Solutions",
-        content: "Jay is awesome",
+        content: "I hope others can read this[his] book and think about the principles presented.. I can not wait to see what the next chapters of your life looks like as you chose to write them down to share with others.",
         image: jaden,
     },
     {
@@ -76,8 +76,8 @@ const Testimonials: React.FC = () => {
     };
 
     return (
-        <section className="py-8">
-            <h2 className="text-2xl font-bold text-center mb-6">Testimonials</h2>
+        <section className="py-8 mt-8 w-3/4 mx-auto">
+            <h2 className="text-2xl font-tektur font-bold text-center mb-6">Testimonials</h2>
             
             <Slider {...settings}>
             {testimonials.map(testimonial => (
