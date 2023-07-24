@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from 'react'
 import ParticleBackground from '../components/particles';
+import Navbar from '../components/navbar';
 
 import one from '../assets/about/1.jpeg'
 import two from '../assets/about/2.jpeg'
@@ -327,7 +328,10 @@ function About() {
           }`
         }
       </style>
-      <h1 className='relative mt-10 text-white z-10'> Scroll down to see the Magic! </h1>
+      <div className='absolute top-0 left-0 w-full z-10'>
+        <Navbar />
+      </div>
+      <h1 className='relative mt-24 text-white z-20'> Scroll down to see the Magic! </h1>
       <div className="viewport" >
           <ParticleBackground/>
           <div className='scene3D-container'>
@@ -362,6 +366,9 @@ function About() {
               <EventCard imgSrc={twoeight} title="Jay" subtitle="Just a photo of me to end the slidshow (if you could call it that )" date={new Date(2003, 3, 24)}/>
             </div>
           </div>
+          <div className='absolute top-0 left-0 w-full z-10'>
+        <Navbar />
+      </div>
       </div>
         </>  
     );

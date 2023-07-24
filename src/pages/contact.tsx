@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Navbar from '../components/navbar';
 
 const ContactMe: React.FC = () => {
 
@@ -181,7 +182,9 @@ const ContactMe: React.FC = () => {
           `
         }
       </style>
-
+      <div className=' absolute top-0 left-0 w-full'>
+        <Navbar />
+      </div>
       <div id="text">
         <div className="line">
           <p className="word">A</p>

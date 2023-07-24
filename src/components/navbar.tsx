@@ -1,19 +1,24 @@
 import { Disclosure } from '@headlessui/react'
 import logo from '../assets/logo-final.png'
-
-const navigation = [
-  { name: 'Home', href: '/', current: false },
-  { name: 'About', href: '/about', current: false},
-  { name: 'Blog', href: '/blog', current: false },
-  { name: 'Projects', href: '/projects', current: false },
-  { name: 'Contact', href: '/contact', current: false },
-]
+import { useLocation } from 'react-router-dom'
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function Navbar() {
+
+  const location = useLocation(); // get current location
+
+  const navigation = [
+    { name: 'Home', href: '/', current: location.pathname === '/' },
+    { name: 'About', href: '/about', current: location.pathname === '/about'},
+    { name: 'Blog', href: '/blog', current: location.pathname === '/blog' },
+    { name: 'Projects', href: '/projects', current: location.pathname === '/projects' },
+    { name: 'Contact', href: '/contact', current: location.pathname === '/contact' },
+  ]
+
+
   return (
     <Disclosure as="nav" className="bg-gray-800 font-tektur">
       {({ open }) => (
@@ -33,16 +38,18 @@ export default function Navbar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
-                    className="block h-8 w-auto lg:hidden"
-                    src="./src/assets/logo-final.png"
-                    alt="Jay Kothari"
-                  />
+                  <a href="/">
+                    <img
+                      className="block h-8 w-auto lg:hidden"
+                      src={logo}
+                      alt="Jay Kothari"
+                    />
                   <img
                     className="hidden h-8 w-auto lg:block"
                     src={logo}
                     alt="Jay Kothari"
                   />
+                  </a>
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
