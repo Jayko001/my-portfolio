@@ -7,7 +7,8 @@ const funFacts = [
   'I am an ex-astrophysics major.',
   'I\'ve never broken a bone.',
   'I am from India.',
-  'I have gotten a haircut in front of 50 people.'
+  'I have gotten a haircut in front of 50 people.',
+  'I have never left the United States.'
 ];
 
 const LoadingScreen = () => {

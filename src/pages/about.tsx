@@ -327,7 +327,7 @@ function About() {
           }`
         }
       </style>
-      <h1 className='relative mt-10 text-white z-10'> Scroll to see the Magic! </h1>
+      <h1 className='relative mt-10 text-white z-10'> Scroll down to see the Magic! </h1>
       <div className="viewport" >
           <ParticleBackground/>
           <div className='scene3D-container'>
