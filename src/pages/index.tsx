@@ -34,8 +34,19 @@ const Home = () => {
 
             <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
             <div className="my-16 text-center animate-fade-in">
-                <h2 className="text-sm text-zinc-500 ">
-                    Hi, my name is Jay and i am <span id="fancy-text" className="bg-gradient-to-r from-purple-500 from-25% via-fuchsia-500 via-50% via-violet-500 via-75% to-purple-500"> awesome! </span>
+                <h2 className="text-sm text-zinc-500 flex flex-col ">
+                    <span>
+                        Student at <span id="fancy-text" className="bg-gradient-to-r from-purple-500 from-25% via-fuchsia-500 via-50% via-violet-500 via-75% to-purple-500"> Unviveristy of Cincinnati </span>
+                    </span>
+                    <span>
+                        Jr. Software Developer at <span id="fancy-text" className="bg-gradient-to-r from-purple-500 from-25% via-fuchsia-500 via-50% via-violet-500 via-75% to-purple-500"> Cincinnati Ventures </span>
+                    </span>
+                    <span>
+                        Founder at <span id="fancy-text" className="bg-gradient-to-r from-purple-500 from-25% via-fuchsia-500 via-50% via-violet-500 via-75% to-purple-500"><a href="https://masterai.app/">MasterAi.app</a> </span>
+                    </span>
+                    <span>
+                        Venture Catalyst at <span id="fancy-text" className="bg-gradient-to-r from-purple-500 from-25% via-fuchsia-500 via-50% via-violet-500 via-75% to-purple-500"> UC Center for Entrepreneurship </span>
+                    </span>
                 </h2>
             </div>
 
