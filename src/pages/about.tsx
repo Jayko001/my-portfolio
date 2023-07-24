@@ -40,9 +40,9 @@ function About() {
         <div className="bg-white rounded-lg overflow-hidden shadow-lg relative">
             <img className="object-cover" src={imgSrc} alt={imgAlt || 'event'} />
             <div className="p-4 h-auto absolute bottom-0 bg-opacity-70 bg-gray-900 text-white">
-                <div className="block font-semibold mb-2 text-lg md:text-base lg:text-lg">{title}</div>
-                <div className="font-semibold text-sm">{subtitle}</div>
-                {date && <div className="font-light text-sm">{date.toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' })}</div>}
+                <div className="block font-semibold mb-2 text-lg md:text-base lg:text-2xl">{title}</div>
+                <div className="font-semibold text-lg">{subtitle}</div>
+                {date && <div className="font-light text-md">{date.toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' })}</div>}
             </div>
         </div>
     </div>
