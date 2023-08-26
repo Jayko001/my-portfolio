@@ -39,7 +39,7 @@ const Home = () => {
                         Student at <span id="fancy-text" className="bg-gradient-to-r from-purple-500 from-25% via-fuchsia-500 via-50% via-violet-500 via-75% to-purple-500"> Unviveristy of Cincinnati </span>
                     </span>
                     <span>
-                        Jr. Software Developer at <span id="fancy-text" className="bg-gradient-to-r from-purple-500 from-25% via-fuchsia-500 via-50% via-violet-500 via-75% to-purple-500"> Cincinnati Ventures </span>
+                        Jr. Software Developer at <span id="fancy-text" className="bg-gradient-to-r from-purple-500 from-25% via-fuchsia-500 via-50% via-violet-500 via-75% to-purple-500"> Tembo </span>
                     </span>
                     <span>
                         Founder at <span id="fancy-text" className="bg-gradient-to-r from-purple-500 from-25% via-fuchsia-500 via-50% via-violet-500 via-75% to-purple-500"><a href="https://masterai.app/">MasterAi.app</a> </span>
