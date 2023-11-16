@@ -39,10 +39,10 @@ const Home = () => {
                         Student at <span id="fancy-text" className="bg-gradient-to-r from-purple-500 from-25% via-fuchsia-500 via-50% via-violet-500 via-75% to-purple-500"> Unviveristy of Cincinnati </span>
                     </span>
                     <span>
-                        Jr. Software Developer at <span id="fancy-text" className="bg-gradient-to-r from-purple-500 from-25% via-fuchsia-500 via-50% via-violet-500 via-75% to-purple-500"> Tembo </span>
+                        Jr. Software Developer at <span id="fancy-text" className="bg-gradient-to-r from-purple-500 from-25% via-fuchsia-500 via-50% via-violet-500 via-75% to-purple-500"><a href="https://tembo.io/"> Tembo </a></span>
                     </span>
                     <span>
-                        Founder at <span id="fancy-text" className="bg-gradient-to-r from-purple-500 from-25% via-fuchsia-500 via-50% via-violet-500 via-75% to-purple-500"><a href="https://masterai.app/">MasterAi.app</a> </span>
+                        Managing Partner at <span id="fancy-text" className="bg-gradient-to-r from-purple-500 from-25% via-fuchsia-500 via-50% via-violet-500 via-75% to-purple-500"><a href="https://www.bearcatventures.org/">Bearcat Ventures</a> </span>
                     </span>
                     <span>
                         Venture Catalyst at <span id="fancy-text" className="bg-gradient-to-r from-purple-500 from-25% via-fuchsia-500 via-50% via-violet-500 via-75% to-purple-500"> UC Center for Entrepreneurship </span>
